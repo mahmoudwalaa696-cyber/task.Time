@@ -19,13 +19,16 @@ function Time() {
   }
 
 //  Date متغيرات لحساب ال
-  const date = now.getDate();
+const day_Name=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+const newD=day_Name[now.getDay()];
+
+const date = now.getDate();
   const month = now.getMonth() + 1;
   const year = now.getFullYear();
 
   tow.innerHTML = `
 <div class="total">
-<h1 class="title">The Time Is Now</h1>
+<h1 class="name">${newD}</h1>
 <div class="part1">
 ${hours}:${minutes}:${seconds}
 </div>
