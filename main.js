@@ -1,13 +1,13 @@
 let tow = document.getElementById("one");
 
 function Time() {
-//  Time متغيرات لحساب ال
+  //  Time متغيرات لحساب ال
   let now = new Date();
   let hours = now.getHours();
   let minutes = now.getMinutes();
   let seconds = now.getSeconds();
 
-//    Seconds او Minutes او Hours ده شرط انه يضيف 0 قدام الرقم الاقل من 10 سواء فى ال 
+  //    Seconds او Minutes او Hours ده شرط انه يضيف 0 قدام الرقم الاقل من 10 سواء فى ال
   if (hours < 10) {
     hours = "0" + hours;
   }
@@ -18,11 +18,20 @@ function Time() {
     seconds = "0" + seconds;
   }
 
-//  Date متغيرات لحساب ال
-const day_Name=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
-const newD=day_Name[now.getDay()];
-
-const date = now.getDate();
+  //  Date متغيرات لحساب ال
+  // تجمع فيه ايام الاسبوع array
+  const day_Name = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  // array متغير يستخدم لظهور اسم اليوم من ال
+  const newD = day_Name[now.getDay()];
+  const date = now.getDate();
   const month = now.getMonth() + 1;
   const year = now.getFullYear();
 
